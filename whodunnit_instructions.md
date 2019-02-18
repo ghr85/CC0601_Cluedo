@@ -46,7 +46,7 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
-The murderer in this case is Professor Plum, the reason being the initial constant declared is immutable and has global scope.
+*The murderer in this case is Professor Plum, the reason being the initial constant declared is immutable and has global scope, attempting to change it will only lead to an error. (Type error)*
 
 #### Episode 3
 
