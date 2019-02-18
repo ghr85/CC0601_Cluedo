@@ -46,7 +46,7 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
-*The murderer in this case is Professor Plum, the reason being the initial constant declared is immutable and has global scope, attempting to change it will only lead to an error. (Type error)*
+*The murderer in this case is Professor Plum, the reason being the initial constant declared is immutable and has block scope, attempting to change it will only lead to an error. (Type error)*
 
 #### Episode 3
 
@@ -107,7 +107,12 @@ const declareWeapon = function() {
 changeWeapon('Revolver');
 const verdict = declareWeapon();
 console.log(verdict);
+ const scenario = 1;
+
 ```
+
+*In this scenario the weapon will be output as a revolver. While the variable assignment
+scenario is immutable, its contents are not*
 
 #### Episode 6
 
