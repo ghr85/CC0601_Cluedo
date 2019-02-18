@@ -1,30 +1,38 @@
-let murderer = 'Professor Plum';
+const scenario = {
+  murderer: 'Mrs. Peacock',
+  room: 'Conservatory',
+  weapon: 'Lead Pipe'
+};
 
-const changeMurderer = function() {
-  murderer = 'Mr. Green';
+const changeScenario = function() {
+  scenario.murderer = 'Mrs. Peacock';
+  scenario.room = 'Dining Room';
 
-  const plotTwist = function() {
-    let murderer = 'Colonel Mustard';
-
-    const unexpectedOutcome = function() {
-      murderer = 'Miss Scarlet';
+  const plotTwist = function(room) {
+    if (scenario.room === room) {
+      scenario.murderer = 'Colonel Mustard';
     }
 
-    unexpectedOutcome();
+    const unexpectedOutcome = function(murderer) {
+      if (scenario.murderer === murderer) {
+        scenario.weapon = 'Candle Stick';
+      }
+    }
+
+    unexpectedOutcome('Colonel Mustard');
   }
 
-  plotTwist();
+  plotTwist('Dining Room');
 }
 
-const declareMurderer = function() {
-  return `The murderer is ${murderer}.`;
+const declareWeapon = function() {
+  return `The weapon is ${scenario.weapon}.`
 }
 
-changeMurderer();
-const verdict = declareMurderer();
+changeScenario();
+const verdict = declareWeapon();
 console.log(verdict);
 
-// *IN this scenario the murderer is Mr Green. That tiny almost imperceptible let
-// means that the murderer variable used in plot twist and unexpected outcome has
-// a very different scope to those outside it. The change murderer function is the
-// only one impacting the end result*
+// *The weapon is in this instance a candlestick : the changeScenario function renders 
+// the plotTwist condition true which in turn renders the unexpectedoutcome condition
+// true. This modifies the scenario object property*

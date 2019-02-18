@@ -212,6 +212,9 @@ const verdict = declareWeapon();
 console.log(verdict);
 ```
 
+*The weapon is in this instance a candlestick : the changeScenario function renders 
+the plotTwist condition true which in turn renders the unexpectedoutcome condition
+true. This modifies the scenario object property*
 #### Episode 9
 
 ```js
