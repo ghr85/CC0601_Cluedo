@@ -1,33 +1,18 @@
 
-
-const scenario = {
-  murderer: 'Miss Scarlet',
-  room: 'Library',
-  weapon: 'Rope'
-};
+let murderer = 'Professor Plum';
 
 const declareMurderer = function() {
-  return `The murderer is ${scenario.murderer}.`;
+  let murderer = 'Mrs. Peacock';
+  return `The murderer is ${murderer}.`;
 }
 
-const verdict = declareMurderer();
-console.log(verdict);
+const firstVerdict = declareMurderer();
+console.log('First Verdict: ', firstVerdict);
 
-//The murderer in this case is Miss Scarlet and it will be shown as output as the constant scenario has global scope and is immutable*
+const secondVerdict = `The murderer is ${murderer}.`;
+console.log('Second Verdict: ', secondVerdict);
 
-// Scenario 2 
-// const murderer = 'Professor Plum';
-//
-// const changeMurderer = function() {
-//   murderer = 'Mrs. Peacock';
-// }
-//
-// const declareMurderer = function() {
-//   return `The murderer is ${murderer}.`;
-// }
-//
-// changeMurderer();
-// const verdict = declareMurderer();
-// console.log(verdict);
-
-//The murderer in this case is Professor Plum, the reason being the initial constant declared is immutable and has global scope, attempting to change it will only lead to an error. (Type error)
+// In this example the first murderer will be Mrs Peacock as the firstVerdict constant 
+// references a function whose murderer scope is within that function, The secondVerdict
+// will be that of professor plum as the murderer variable referenced is outside the scope
+// of the declaremurder constant
