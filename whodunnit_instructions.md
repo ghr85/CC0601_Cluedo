@@ -137,6 +137,7 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
+*In this scenario the murderer is Mrs. White. The bracket threw me on this one - the last part of change murderer is in fact setting the murderer variable to Mrs White.*
 
 #### Episode 7
 

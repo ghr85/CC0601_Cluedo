@@ -1,20 +1,23 @@
-const scenario = {
-  murderer: 'Miss Scarlet',
-  room: 'Kitchen',
-  weapon: 'Candle Stick'
-};
+let murderer = 'Colonel Mustard';
 
-const changeWeapon = function(newWeapon) {
-  scenario.weapon = newWeapon;
+const changeMurderer = function() {
+  murderer = 'Mr. Green';
+
+  const plotTwist = function() {
+    murderer = 'Mrs. White';
+  }
+
+  plotTwist();
 }
 
-const declareWeapon = function() {
-  return `The weapon is the ${scenario.weapon}.`;
+const declareMurderer = function () {
+  return `The murderer is ${murderer}.`;
 }
 
-changeWeapon('Revolver');
-const verdict = declareWeapon();
+changeMurderer();
+const verdict = declareMurderer();
 console.log(verdict);
 
 
-//In this scenario the 
+// *In this scenario the murderer is Mrs. White. The bracket threw me on this one
+//  - the last part of change murderer is in fact setting the murderer variable to Mrs White.*
