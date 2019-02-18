@@ -168,6 +168,10 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
+*IN this scenario the murderer is Mr Green. That tiny almost imperceptible let
+means that the murderer variable used in plot twist and unexpected outcome has
+a very different scope to those outside it. The change murderer function is the
+only one impacting the end result*
 
 #### Episode 8
 
