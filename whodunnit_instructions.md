@@ -212,7 +212,7 @@ const verdict = declareWeapon();
 console.log(verdict);
 ```
 
-*The weapon is in this instance a candlestick : the changeScenario function renders 
+*The weapon is in this instance a candlestick : the changeScenario function renders
 the plotTwist condition true which in turn renders the unexpectedoutcome condition
 true. This modifies the scenario object property*
 #### Episode 9
@@ -231,6 +231,8 @@ const declareMurderer = function() {
 const verdict = declareMurderer();
 console.log(verdict);
 ```
+
+*In this case the murderer remains Professor PLum as the let murderer = Mrs Peacock creates a new differing scope*
 
 ### Extensions
 
